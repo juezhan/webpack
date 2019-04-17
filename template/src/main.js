@@ -4,6 +4,8 @@
 {{/if_eq}}
 import Vue from 'vue'
 import App from './App'
+import axios from './config/axios'
+import VueAxios from 'vue-axios'
 {{#router}}
 import router from './router'
 {{/router}}
@@ -12,6 +14,8 @@ import Vuex from 'vuex'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import store from  './store/store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Vuex){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/vuex}}
+import Global from './global'
+import './element-ui'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
