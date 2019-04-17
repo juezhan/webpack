@@ -33,6 +33,12 @@
     "element-ui": "^2.7.2"
   },
   "devDependencies": {
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "toml": "^3.0.0",
+    "toml-loader": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     {{#lint}}
     "babel-eslint": "^7.2.3",
     "eslint": "^4.15.0",
