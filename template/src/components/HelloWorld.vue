@@ -1,8 +1,7 @@
-<template>
-  <div class="hello">
-    <h1>\{{ msg }}</h1>
-    <el-button>Element Ui</el-button>
-  </div>
+<template lang="pug">
+  div.hello
+    h1 \{{ msg }}
+    el-button Element Ui
 </template>
 
 <script>

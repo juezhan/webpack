@@ -9,15 +9,17 @@ import VueAxios from 'vue-axios'
 {{#router}}
 import router from './router'
 {{/router}}
-{{#vuex}}  //vuex为true的时候就会写入这些
-import Vuex from 'vuex'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import store from  './store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Vue.use(Vuex){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-{{/vuex}}
 import Global from './global'
 import './element-ui'
+{{#vuex}}  //vuex为true的时候就会写入这些
+import Vuex from 'vuex'{{#if_eq lintConfig "airbnb"}}{{/if_eq}}
+import store from  './store'{{#if_eq lintConfig "airbnb"}}{{/if_eq}}
+Vue.use(Vuex){{#if_eq lintConfig "airbnb"}}{{/if_eq}}
+{{/vuex}}
 Vue.config.productionTip = false
 
+Vue.use(Global)
+Vue.use(VueAxios, axios)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

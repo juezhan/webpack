@@ -11,7 +11,7 @@ const pkg = require('./package.json')
 
 const templateVersion = pkg.version
 
-const { addTestAnswers } = require('./scenarios')
+const {addTestAnswers} = require('./scenarios')
 
 module.exports = {
   metalsmith: {
@@ -31,7 +31,7 @@ module.exports = {
       return templateVersion
     },
   },
-  
+
   prompts: {
     name: {
       when: 'isNotTest',
@@ -74,7 +74,7 @@ module.exports = {
       type: 'confirm',
       message: 'Install vue-router?',
     },
-    vuex:{
+    vuex: {
       when: 'isNotTest',
       type: 'confirm',
       message: 'Install vuex?'
@@ -166,18 +166,18 @@ module.exports = {
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
     'config/test.env.js': 'unit || e2e',
-    'build/webpack.test.conf.js': "unit && runner === 'karma'",
+    'build/webpack.test.conf.js': 'unit && runner === \'karma\'',
     'test/unit/**/*': 'unit',
-    'test/unit/index.js': "unit && runner === 'karma'",
-    'test/unit/jest.conf.js': "unit && runner === 'jest'",
-    'test/unit/karma.conf.js': "unit && runner === 'karma'",
-    'test/unit/specs/index.js': "unit && runner === 'karma'",
-    'test/unit/setup.js': "unit && runner === 'jest'",
+    'test/unit/index.js': 'unit && runner === \'karma\'',
+    'test/unit/jest.conf.js': 'unit && runner === \'jest\'',
+    'test/unit/karma.conf.js': 'unit && runner === \'karma\'',
+    'test/unit/specs/index.js': 'unit && runner === \'karma\'',
+    'test/unit/setup.js': 'unit && runner === \'jest\'',
     'test/e2e/**/*': 'e2e',
     'src/store/**/*': 'vuex',
     'src/router/**/*': 'router',
   },
-  complete: function(data, { chalk }) {
+  complete: function (data, {chalk}) {
     const green = chalk.green
 
     sortDependencies(data, green)
