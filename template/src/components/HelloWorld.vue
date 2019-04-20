@@ -16,14 +16,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-{{#css "scss"}}
-<!-- scss -->
-{{else "less"}}
-<!-- less -->
-{{else "stylus"}}
-<!-- stylus -->
-{{/css}}
-
 <style scoped type="text/stylus">
   h1, h2 {
     font-weight: normal;
