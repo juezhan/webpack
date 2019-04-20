@@ -74,15 +74,32 @@ module.exports = {
       type: 'confirm',
       message: 'Install vue-router?',
     },
+    htmlTemplate: {
+      when: 'isNotTest',
+      type: 'list',
+      message: 'HTML Template?',
+      choices: [
+        {
+          name: 'PUG',
+          value: 'pug',
+          short: 'pug',
+        },
+        {
+          name: 'None',
+          value: 'none',
+          short: 'none',
+        },
+      ]
+    },
     css: {
       when: 'isNotTest',
       type: 'list',
       message: 'CSS Pre-processors?',
       choices: [
         {
-          name: 'SASS/SCSS',
-          value: 'scss',
-          short: 'scss',
+          name: 'Stylus',
+          value: 'stylus',
+          short: 'stylus',
         },
         {
           name: 'LESS',
@@ -90,9 +107,14 @@ module.exports = {
           short: 'less',
         },
         {
-          name: 'Stylus',
-          value: 'stylus',
-          short: 'stylus',
+          name: 'SASS/SCSS',
+          value: 'scss',
+          short: 'scss',
+        },
+        {
+          name: 'None',
+          value: 'none',
+          short: 'none',
         },
       ]
     },
