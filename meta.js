@@ -74,6 +74,28 @@ module.exports = {
       type: 'confirm',
       message: 'Install vue-router?',
     },
+    css: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'CSS Pre-processors?',
+      choices: [
+        {
+          name: 'SASS/SCSS',
+          value: 'scss',
+          short: 'scss',
+        },
+        {
+          name: 'LESS',
+          value: 'less',
+          short: 'less',
+        },
+        {
+          name: 'Stylus',
+          value: 'stylus',
+          short: 'stylus',
+        },
+      ]
+    },
     vuex: {
       when: 'isNotTest',
       type: 'confirm',
