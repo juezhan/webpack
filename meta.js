@@ -75,7 +75,7 @@ module.exports = {
       message: 'Install vue-router?',
     },
     css: {
-      when: 'isNotTest && lint',
+      when: 'isNotTest',
       type: 'list',
       message: 'CSS Pre-processors?',
       choices: [
